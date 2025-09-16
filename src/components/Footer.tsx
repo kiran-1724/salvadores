@@ -13,9 +13,9 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-white tracking-wider mb-4">Quick Links</h4>
           <nav className="flex flex-col space-y-2 text-sm">
-            <Link href="/#about" className="hover:text-amber-400">About Us</Link>
+            <Link href="/about" className="hover:text-amber-400">About Us</Link>
             <Link href="/menu" className="hover:text-amber-400">Menu</Link>
-            <Link href="/#reservations" className="hover:text-amber-400">Reservations</Link>
+            <Link href="/reservation" className="hover:text-amber-400">Reservations</Link>
           </nav>
         </div>
         <div>

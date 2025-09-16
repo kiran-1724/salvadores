@@ -10,8 +10,8 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 const navLinks = [
   { name: 'HOME', href: '/' },
   { name: 'MENU', href: '/menu' },
-  { name: 'RESERVATIONS', href: '/#reservations' },
-  { name: 'ABOUT', href: '/#about' },
+  { name: 'RESERVATIONS', href: '/reservation' },
+  { name: 'ABOUT', href: '/about' },
 ];
 
 export default function Header() {
