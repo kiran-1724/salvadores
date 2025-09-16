@@ -200,86 +200,6 @@ export default function AboutPage() {
         </section>
 
   
-        {/* Philosophy Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="text-center mb-12 md:mb-16"
-            >
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-6">
-                Our Philosophy
-              </h2>
-              <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
-                The principles that guide everything we do at Salvadores
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-              {[
-                {
-                  icon: Flame,
-                  title: 'Culinary Excellence',
-                  description: 'We source the finest ingredients globally and employ time-honored techniques alongside innovative methods to create unforgettable flavors.',
-                  color: 'text-red-400'
-                },
-                {
-                  icon: Heart,
-                  title: 'Heartfelt Service',
-                  description: 'Every guest is treated as family, with personalized attention and genuine care that makes each visit feel special and memorable.',
-                  color: 'text-pink-400'
-                },
-                {
-                  icon: Crown,
-                  title: 'Luxury Experience',
-                  description: 'From our elegant ambiance to our curated wine selection, every detail is designed to provide an unparalleled fine dining experience.',
-                  color: 'text-yellow-400'
-                },
-                {
-                  icon: Globe,
-                  title: 'Cultural Fusion',
-                  description: 'We celebrate the rich culinary traditions of the Mediterranean, France, Italy, and Ceylon, creating harmonious flavor combinations.',
-                  color: 'text-blue-400'
-                },
-                {
-                  icon: Users,
-                  title: 'Community Focus',
-                  description: 'We believe in supporting local farmers, artisans, and our community while creating gathering spaces for meaningful connections.',
-                  color: 'text-green-400'
-                },
-                {
-                  icon: Sparkles,
-                  title: 'Continuous Innovation',
-                  description: 'While respecting tradition, we constantly evolve our menu and techniques to surprise and delight our discerning guests.',
-                  color: 'text-purple-400'
-                }
-              ].map((principle, index) => (
-                <motion.div
-                  key={index}
-                  variants={scaleIn}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center group"
-                >
-                  <div className="rounded-2xl border border-white/10 bg-black/40 p-6 md:p-8 backdrop-blur-sm hover:border-[#D4AF37]/30 transition-all duration-500 h-full">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#B8941F]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <principle.icon size={32} className={`${principle.color}`} />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h3>
-                    <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-                      {principle.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Awards & Recognition Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-black">
@@ -352,64 +272,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Timeline Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-black to-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="text-center mb-12 md:mb-16"
-            >
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-6">
-                Our Journey
-              </h2>
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                From humble beginnings to becoming Bengaluru&apos;s premier fine dining destination
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                {/* Timeline Line */}
-                <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#D4AF37] to-[#B8941F] md:transform md:-translate-x-px"></div>
-
-                {milestones.map((milestone, index) => (
-                  <motion.div
-                    key={index}
-                    variants={fadeInUp}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`relative flex items-center mb-12 ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Timeline Dot */}
-                    <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] rounded-full md:transform md:-translate-x-1/2 z-10"></div>
-
-                    {/* Content */}
-                    <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                      <div className="rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className="text-2xl font-bold text-[#D4AF37]">{milestone.year}</span>
-                          <Calendar size={20} className="text-[#D4AF37]" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-3">{milestone.event}</h3>
-                        <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
-                      </div>
-                    </div>
-
-                    {/* Spacer for desktop layout */}
-                    <div className="hidden md:block md:w-2/12"></div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+    
 
         {/* Location & Ambiance Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900">
@@ -447,7 +310,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Wine Cellar',
-                  description: 'Temperature-controlled cellar housing 500+ premium selections',
+                  description: 'Temperature-controlled cellar housing ',
                   features: ['Rare Vintages', 'Sommelier Tours', 'Tasting Events'],
                   image: imageUrls.wineCellar,
                   alt: 'Salvadores wine cellar with premium wine collection'
